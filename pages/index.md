@@ -1,22 +1,21 @@
 ---
-title: Anthony Fu
+title: Lucas Della Bella
 plum: true
 ---
 
-Hey, I am Anthony Fu, a fanatical open sourceror. Working at [NuxtLabs](https://nuxtlabs.com/).
+Hey! I'm Lucas - curious, excitable, and someone who just loves learning new things, and hacking on new shit.
 
-Creator of [Vitest](https://github.com/vitest-dev/vitest), [Slidev](https://github.com/slidevjs/slidev), [VueUse](https://github.com/vueuse/vueuse), [UnoCSS](https://github.com/antfu/unocss), [Type Challenges](https://github.com/type-challenges/type-challenges) and [others](/projects).<br>
-Core team member of [Vue](https://vuejs.org/), [Nuxt](http://nuxtjs.org/) and [Vite](http://vitejs.dev/).<br>
-Team member of [Windi CSS](https://windicss.org/), [wenyan-lang 文言](https://wy-lang.org/) and [Intlify](https://github.com/intlify).
+I like to play with code, compose tunes, and record video. I'm pretty much always game for coffee. I love being of use to others.
 
-Dreaming up ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects). I have also started a 100-day challenge about design, compform, interactivity, and experimenting with new things on [100.antfu.me](https://100.antfu.me/).
+I'm in my late 20s and still figuring out who I am. Huh 🤔 Guess it never changes.
 
-Outside of programming, I enjoy doing photography and traveling. Some of my photos can be found on [Instagram](https://www.instagram.com/antfu7). If you happen to be in the same city I live (currently in Xiamen), maybe we can hang out and take some photos or code together.
+Recently, [Indie Hackers](https://www.indiehackers.com/), [Peter Levels](https://levels.io/blog/), and [The Mom Test](https://www.goodreads.com/book/show/52283963-the-mom-test) inspired me to just... make. I hadn't realized that you _could_ build a small tech business. I assumed that everything had to be go-big-or-go-home, winner-take-all endeavors. Realizing that we can build software for niche markets that VCs won't touch has opened my eyes and gotten me hyped to build again 😤
 
-***
+I'm also pretty forgetful, and often lose projects I'm working on because of my laptop getting blown up! Haha! Oops! Here's one to all my attentionally challenged friends out there! 🍻
 
-Find me on [GitHub](https://github.com/antfu), [Twitter](https://www.twitter.com/antfu7), [YouTube](https://www.youtube.com/anthonyfu7), [知乎](https://www.zhihu.com/people/antfu), [微博](https://weibo.com/u/7485197193) or [哔哩哔哩](https://space.bilibili.com/668380).<br>
-Mail me at [hi@antfu.me](mailto:hi@antfu.me).<br>
-Chat with the community at [my Discord Server](https://chat.antfu.me).
+---
 
-If you like my works, consider sponsoring me on [GitHub Sponsor](https://github.com/sponsors/antfu) to keep them sustainable.
+Find me on [GitHub](https://github.com/lucasdellabella), [Twitter](https://www.twitter.com/FiveEels), [YouTube (1)](https://www.youtube.com/channel/UCRWhLAnoDR7H-bK874mf_dA), [YouTube (2)](https://www.youtube.com/c/hganghiskhan).\
+Hit me up at <dellabella.lucas@gmail.com>.
+
+If you like my works, please ^ send me an email, I'm always happy to know I've put good energy into the world :).
