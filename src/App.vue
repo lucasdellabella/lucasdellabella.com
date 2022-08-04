@@ -27,7 +27,7 @@ const favicons = {
       sizes: "16x16",
       href: `favicon/${theme}/favicon-16x16.png`,
     },
-    { rel: "manifest", href: `favicon/${theme}/site.webmanifest` },
+    { rel: "manifest", href: `site.webmanifest` },
     {
       rel: "mask-icon",
       href: `favicon/${theme}/safari-pinned-tab.svg`,

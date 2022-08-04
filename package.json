@@ -9,12 +9,14 @@
     "redirects": "esno scripts/redirects.ts"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.0",
     "@vueuse/core": "^8.9.4",
     "@vueuse/head": "^0.7.7",
     "dayjs": "^1.11.4",
     "nprogress": "^0.2.0",
     "vue": "^3.2.37",
-    "vue-router": "4.1.2"
+    "vue-router": "4.1.2",
+    "vue-soundcloud-player": "^1.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
