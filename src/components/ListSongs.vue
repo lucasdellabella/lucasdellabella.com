@@ -5,16 +5,11 @@
 <script lang="ts">
 export default {
   methods: {
-    ready() {
-      console.log("player ready");
-    },
     embedURL(trackId: number) {
       return `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${trackId}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`;
     },
     nextSong() {
-      //   this.songs.push(this.renderedSongs.shift()!);
-      //   this.renderedSongs.push(this.songs.shift()!);
-      //   return;
+      return (this.index = (this.index + 1) % this.songs.length);
     },
   },
   data() {
@@ -48,7 +43,7 @@ export default {
 <template>
   <div class="iframe-container">
     <div class="button-backing">
-      <button @click="index = (index + 1) % songs.length">
+      <button @click="nextSong">
         <div
           i-carbon:skip-forward-filled
           style="background-color: white; transform: scale(1.8, 1.8)"
@@ -75,7 +70,11 @@ export default {
 
 <style scoped>
 .button-backing {
-  background-color: white;
+  background: linear-gradient(
+    217deg,
+    rgba(0, 0, 0, 0),
+    rgba(255, 255, 255, 1) 30%
+  );
   border-radius: 100px;
 
   position: absolute;
@@ -91,7 +90,7 @@ export default {
 
 button:hover {
   transform: scale(1.2);
-  /* box-shadow: ?; */
+  box-shadow: 0 0 8px -1px #dc9c5e;
 }
 
 .loading-border {
@@ -118,84 +117,10 @@ button {
 
   background-image: linear-gradient(45deg, #d9d2c4, #fad9b7);
   color: white;
-  /* border: solid 5px #878d97; */
   border-radius: 100px;
   transition: all 0.45s ease-out;
-
-  /* animation-name: fade-in;
-  animation-duration: 300ms;
-  animation-delay: 3s;
-  animation-fill-mode: both; */
 }
 .example {
   background-color: cyan;
 }
-
-/*
-
-1. remove artworkVisible class from
-"sound g-box-full g-background-default g-shadow-inset artworkVisible"
-*/
-
-/* necessary rules */
-/* .sound__footer {
-  display: none;
-}
-
-.sound__panel {
-  display: none;
-}
-.soundHeader__rightRow {
-  display: none;
-}
-
-.privacyPolicy {
-  display: none;
-}
-
-.soundHeader__title .title a:first-child,
-.soundHeader__title .title br {
-  display: none;
-}
-
-.soundHeader__title {
-  position: absolute;
-  top: -32px;
-}
-
-.soundHeader {
-  display: flex;
-  position: relative;
-}
-
-.sound__content {
-  display: flex;
-  overflow: auto;
-}
-
-/* TODO */
-/* Create my own SVG play button in figma and swap it out */
-/* Maybe animate the SVG / make it spin */
-/* Figure out how to move the waveform */
-/* Maybe not necessary */
-
-/* .commentPopover {
-  display: none;
-}
-
-.waveformCommentsNode {
-  display: none;
-}
-
-.sound__header {
-}
-
-.sound__waveform {
-  width: 100%;
-  position: unset;
-}
-
-.sound__teaser {
-  display: none;
-} */
 </style>
