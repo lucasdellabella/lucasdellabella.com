@@ -43,12 +43,14 @@ export default {
 <template>
   <div class="iframe-container">
     <div class="button-backing">
-      <button @click="nextSong">
-        <div
-          i-carbon:skip-forward-filled
-          style="background-color: white; transform: scale(1.8, 1.8)"
-        />
-      </button>
+      <div class="button-wrapper">
+        <button @click="nextSong">
+          <div
+            i-carbon:skip-forward-filled
+            style="background-color: white; transform: scale(1.8, 1.8)"
+          />
+        </button>
+      </div>
     </div>
     <template v-for="(song, i) of songs" :key="song.id">
       <iframe
@@ -86,13 +88,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-button:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 8px -1px #dc9c5e;
-}
+  -webkit-clip-path: circle(80%);
+  clip-path: circle(50%);
 
+  box-shadow: 10px -10px 8px -15px inset;
+}
 .loading-border {
   width: 100%;
   height: 100%;
@@ -101,7 +102,7 @@ button:hover {
   position: absolute;
   inset: 0;
   z-index: -1;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .iframe-container {
@@ -119,8 +120,16 @@ button {
   color: white;
   border-radius: 100px;
   transition: all 0.45s ease-out;
+
+  box-shadow: -3px 3px 10px 0px #cacaca;
 }
-.example {
-  background-color: cyan;
+
+button:hover {
+  transform: scale(1.2);
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: -15px 15px 30px;
 }
 </style>
