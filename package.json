@@ -16,7 +16,7 @@
     "nprogress": "^0.2.0",
     "vue": "^3.2.37",
     "vue-router": "4.1.2",
-    "vue-soundcloud-player": "^1.2.0"
+    "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",

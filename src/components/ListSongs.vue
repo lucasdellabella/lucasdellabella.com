@@ -1,0 +1,201 @@
+<!-- <script setup lang="ts">
+// defineProps<{ songs: Record<string, any[]> }>();
+</script> -->
+
+<script lang="ts">
+export default {
+  methods: {
+    ready() {
+      console.log("player ready");
+    },
+    embedURL(trackId: number) {
+      return `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${trackId}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`;
+    },
+    nextSong() {
+      //   this.songs.push(this.renderedSongs.shift()!);
+      //   this.renderedSongs.push(this.songs.shift()!);
+      //   return;
+    },
+  },
+  data() {
+    return {
+      index: 0,
+      renderedSongs: [],
+      firstEmbedHadTimeToLoad: false,
+      songs: [
+        { id: 835612252 },
+        { id: 828577543 },
+        { id: 455122617 },
+        { id: 333356598 },
+        { id: 330547202 },
+        { id: 322109408 },
+      ],
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.firstEmbedHadTimeToLoad = true;
+    }, 1500);
+  },
+  setup() {
+    return {
+      name: "Music",
+    };
+  },
+};
+</script>
+
+<template>
+  <div class="iframe-container">
+    <div class="button-backing">
+      <button @click="index = (index + 1) % songs.length">
+        <div
+          i-carbon:skip-forward-filled
+          style="background-color: white; transform: scale(1.8, 1.8)"
+        />
+      </button>
+    </div>
+    <template v-for="(song, i) of songs" :key="song.id">
+      <iframe
+        v-if="i === 0 || firstEmbedHadTimeToLoad"
+        v-show="i === index"
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        :src="embedURL(song.id)"
+      ></iframe>
+    </template>
+    <div class="loading-border"></div>
+  </div>
+</template>
+
+<!-- TODO: Apply dark-theming for all these custom little elements -->
+
+<style scoped>
+.button-backing {
+  background-color: white;
+  border-radius: 100px;
+
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: -38px;
+  right: -38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  transform: scale(1.2);
+  /* box-shadow: ?; */
+}
+
+.loading-border {
+  width: 100%;
+  height: 100%;
+  outline: solid 1px black;
+  outline-offset: -1px;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.iframe-container {
+  position: relative;
+}
+
+/* How do I reuse colors across the application? */
+
+button {
+  /* This button follows the positioning of its parent, but its parent  */
+  width: 64px;
+  height: 64px;
+
+  background-image: linear-gradient(45deg, #d9d2c4, #fad9b7);
+  color: white;
+  /* border: solid 5px #878d97; */
+  border-radius: 100px;
+  transition: all 0.45s ease-out;
+
+  /* animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-delay: 3s;
+  animation-fill-mode: both; */
+}
+.example {
+  background-color: cyan;
+}
+
+/*
+
+1. remove artworkVisible class from
+"sound g-box-full g-background-default g-shadow-inset artworkVisible"
+*/
+
+/* necessary rules */
+/* .sound__footer {
+  display: none;
+}
+
+.sound__panel {
+  display: none;
+}
+.soundHeader__rightRow {
+  display: none;
+}
+
+.privacyPolicy {
+  display: none;
+}
+
+.soundHeader__title .title a:first-child,
+.soundHeader__title .title br {
+  display: none;
+}
+
+.soundHeader__title {
+  position: absolute;
+  top: -32px;
+}
+
+.soundHeader {
+  display: flex;
+  position: relative;
+}
+
+.sound__content {
+  display: flex;
+  overflow: auto;
+}
+
+/* TODO */
+/* Create my own SVG play button in figma and swap it out */
+/* Maybe animate the SVG / make it spin */
+/* Figure out how to move the waveform */
+/* Maybe not necessary */
+
+/* .commentPopover {
+  display: none;
+}
+
+.waveformCommentsNode {
+  display: none;
+}
+
+.sound__header {
+}
+
+.sound__waveform {
+  width: 100%;
+  position: unset;
+}
+
+.sound__teaser {
+  display: none;
+} */
+</style>

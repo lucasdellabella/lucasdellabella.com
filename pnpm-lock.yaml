@@ -15,6 +15,7 @@ specifiers:
   '@types/nprogress': ^0.2.0
   '@unocss/reset': ^0.44.7
   '@vitejs/plugin-vue': ^3.0.1
+  '@vue/composition-api': ^1.7.0
   '@vueuse/core': ^8.9.4
   '@vueuse/head': 0.7.0
   critters: 0.0.16
@@ -51,14 +52,17 @@ specifiers:
   vite-svg-loader: ^3.4.0
   vue: ^3.2.37
   vue-router: 4.1.2
+  vue-youtube: ^1.4.0
 
 dependencies:
-  '@vueuse/core': 8.9.4_vue@3.2.37
+  '@vue/composition-api': 1.7.0_vue@3.2.37
+  '@vueuse/core': 8.9.4_3nmzzoefrdru4lagmst3ha3a3q
   '@vueuse/head': 0.7.0_vue@3.2.37
   dayjs: 1.11.4
   nprogress: 0.2.0
   vue: 3.2.37
   vue-router: 4.1.2_vue@3.2.37
+  vue-youtube: 1.4.0_vue@3.2.37
 
 devDependencies:
   '@antfu/eslint-config': 0.25.2_he2ccbldppg44uulnyq4rwocfa
@@ -2139,6 +2143,13 @@ packages:
       '@vue/compiler-dom': 3.2.37
       '@vue/shared': 3.2.37
 
+  /@vue/composition-api/1.7.0_vue@3.2.37:
+    resolution: {integrity: sha512-hxOgLYR+wjuPX9bkP2pAPlqUs98XxBoa9DSLyp1z6+YR92wC42PZcZKs4d+VRtcv4udOv041Kss+F6ap5nj8YA==}
+    peerDependencies:
+      vue: '>= 2.5 < 2.7'
+    dependencies:
+      vue: 3.2.37
+
   /@vue/devtools-api/6.2.1:
     resolution: {integrity: sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==}
 
@@ -2195,7 +2206,7 @@ packages:
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
 
-  /@vueuse/core/8.9.4_vue@3.2.37:
+  /@vueuse/core/8.9.4_3nmzzoefrdru4lagmst3ha3a3q:
     resolution: {integrity: sha512-B/Mdj9TK1peFyWaPof+Zf/mP9XuGAngaJZBwPaXBvU3aCTZlx3ltlrFFFyMV4iGBwsjSCeUCgZrtkEj9dS2Y3Q==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
@@ -2207,10 +2218,11 @@ packages:
         optional: true
     dependencies:
       '@types/web-bluetooth': 0.0.14
+      '@vue/composition-api': 1.7.0_vue@3.2.37
       '@vueuse/metadata': 8.9.4
-      '@vueuse/shared': 8.9.4_vue@3.2.37
+      '@vueuse/shared': 8.9.4_3nmzzoefrdru4lagmst3ha3a3q
       vue: 3.2.37
-      vue-demi: 0.11.3_vue@3.2.37
+      vue-demi: 0.11.3_3nmzzoefrdru4lagmst3ha3a3q
 
   /@vueuse/head/0.7.0_vue@3.2.37:
     resolution: {integrity: sha512-FIGstRH9v3InTl17leT/QWbajwHMImQd1P+l6Nq2gY8M0iZ78OUDrJVQ1qBe+8tSnDnOUv+4Nt9ktI9UKFKffA==}
@@ -2222,7 +2234,7 @@ packages:
   /@vueuse/metadata/8.9.4:
     resolution: {integrity: sha512-IwSfzH80bnJMzqhaapqJl9JRIiyQU0zsRGEgnxN6jhq7992cPUJIRfV+JHRIZXjYqbwt07E1gTEp0R0zPJ1aqw==}
 
-  /@vueuse/shared/8.9.4_vue@3.2.37:
+  /@vueuse/shared/8.9.4_3nmzzoefrdru4lagmst3ha3a3q:
     resolution: {integrity: sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
@@ -2233,8 +2245,9 @@ packages:
       vue:
         optional: true
     dependencies:
+      '@vue/composition-api': 1.7.0_vue@3.2.37
       vue: 3.2.37
-      vue-demi: 0.11.3_vue@3.2.37
+      vue-demi: 0.11.3_3nmzzoefrdru4lagmst3ha3a3q
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -2781,7 +2794,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
-    dev: true
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -4100,6 +4112,10 @@ packages:
     resolution: {integrity: sha512-WvnskjM5QJbSjuZrJkG3CeIE/ywYjL9/UMYu5dpOa3iD6GjefbQq7J/nrZY4yo6QSYuYwmj7G7Xd9qzCjMMKUw==}
     dev: true
 
+  /get-youtube-id/1.0.1:
+    resolution: {integrity: sha512-5yidLzoLXbtw82a/Wb7LrajkGn29BM6JuLWeHyNfzOGp1weGyW4+7eMz6cP23+etqj27VlOFtq8fFFDMLq/FXQ==}
+    dev: false
+
   /glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -4775,6 +4791,10 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
+  /load-script/1.0.0:
+    resolution: {integrity: sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==}
+    dev: false
+
   /local-pkg/0.4.1:
     resolution: {integrity: sha512-lL87ytIGP2FU5PWwNDo0w3WhIo2gopIAxPg9RxDYF7m4rr5ahuZxP22xnJHIvaLTe4Z9P6uKKY2UHiwyB4pcrw==}
     engines: {node: '>=14'}
@@ -5000,7 +5020,6 @@ packages:
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
-    dev: true
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -5760,6 +5779,10 @@ packages:
       totalist: 3.0.0
     dev: true
 
+  /sister/3.0.2:
+    resolution: {integrity: sha512-p19rtTs+NksBRKW9qn0UhZ8/TUI9BPw9lmtHny+Y3TinWlOa9jWh9xB0AtPSdmOy49NJJJSSe0Ey4C7h0TrcYA==}
+    dev: false
+
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -6275,7 +6298,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.5.2
       '@rollup/pluginutils': 4.2.1
-      '@vueuse/core': 8.9.4_vue@3.2.37
+      '@vueuse/core': 8.9.4_3nmzzoefrdru4lagmst3ha3a3q
       local-pkg: 0.4.2
       magic-string: 0.26.2
       unimport: 0.6.3_vite@3.0.2
@@ -6606,7 +6629,7 @@ packages:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
     dev: true
 
-  /vue-demi/0.11.3_vue@3.2.37:
+  /vue-demi/0.11.3_3nmzzoefrdru4lagmst3ha3a3q:
     resolution: {integrity: sha512-DpM0TTMpclRZDV6AIacgg837zrim/C9Zn+2ztXBs9hsESJN9vC83ztjTe4KC4HgJuVle8YUjPp7HTwWtwOHfmg==}
     engines: {node: '>=12'}
     hasBin: true
@@ -6618,6 +6641,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      '@vue/composition-api': 1.7.0_vue@3.2.37
       vue: 3.2.37
 
   /vue-eslint-parser/9.0.2_eslint@8.20.0:
@@ -6645,6 +6669,18 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.2.1
       vue: 3.2.37
+
+  /vue-youtube/1.4.0_vue@3.2.37:
+    resolution: {integrity: sha512-PCyfGAouSt6rTX0GLUzpdX2XC52zYf7a9mUhdp53jeDlPoU40hpsvyV3Zg2+947pvbv27ORcmtzm2fqO08kh9Q==}
+    peerDependencies:
+      vue: ^2.3.0
+    dependencies:
+      get-youtube-id: 1.0.1
+      vue: 3.2.37
+      youtube-player: 5.5.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /vue/3.2.37:
     resolution: {integrity: sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==}
@@ -7003,3 +7039,13 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /youtube-player/5.5.2:
+    resolution: {integrity: sha512-ZGtsemSpXnDky2AUYWgxjaopgB+shFHgXVpiJFeNB5nWEugpW1KWYDaHKuLqh2b67r24GtP6HoSW5swvf0fFIQ==}
+    dependencies:
+      debug: 2.6.9
+      load-script: 1.0.0
+      sister: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
