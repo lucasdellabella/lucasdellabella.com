@@ -48,6 +48,7 @@ export default {
           <div
             i-carbon:skip-forward-filled
             style="background-color: white; transform: scale(1.8, 1.8)"
+            class="skip-icon"
           />
         </button>
       </div>
@@ -94,6 +95,24 @@ export default {
 
   box-shadow: 10px -10px 8px -15px inset;
 }
+
+html.dark .skip-icon {
+  box-shadow: inset 0px -7px 11px 5px black;
+}
+
+html.dark .button-backing {
+  background: linear-gradient(217deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%);
+}
+
+html.dark button {
+  box-shadow: -3px 3px 10px 0px #353535;
+  color: black;
+}
+
+html.dark iframe {
+  box-shadow: none;
+}
+
 .loading-border {
   width: 100%;
   height: 100%;
