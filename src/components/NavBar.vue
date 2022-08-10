@@ -17,24 +17,21 @@ import { isDark } from "~/logics";
       <div class="right">
         <router-link to="/posts" title="Blog">
           <span class="lt-md:hidden">Blog</span>
-          <div i-ri-article-line md:hidden />
+          <div i-ri-article-line class="md:hidden" />
         </router-link>
         <router-link to="/projects" title="Projects">
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </router-link>
-        <router-link to="/music" class="lt-md:hidden" title="Music">
-          Music
+        <router-link to="/music" title="Music">
+          <span class="lt-md:hidden">Music</span>
+          <div i-ri:music-2-line class="md:hidden" />
         </router-link>
-        <router-link to="/videos" class="lt-md:hidden" title="Videos">
-          Videos
+        <router-link to="/videos" title="Videos">
+          <span class="lt-md:hidden">Videos</span>
+          <div i-ri:youtube-line class="md:hidden" />
         </router-link>
-        <a
-          href="https://twitter.com/FiveEels"
-          target="_blank"
-          title="Twitter"
-          class="lt-md:hidden"
-        >
+        <a href="https://twitter.com/FiveEels" target="_blank" title="Twitter">
           <feather-twitter />
         </a>
         <a
