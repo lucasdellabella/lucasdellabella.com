@@ -113,6 +113,10 @@ html.dark iframe {
   box-shadow: none;
 }
 
+html.dark .loading-border {
+  outline: solid 1px white;
+}
+
 .loading-border {
   width: 100%;
   height: 100%;
