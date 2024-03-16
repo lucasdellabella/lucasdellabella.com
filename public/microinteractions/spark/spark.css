@@ -1,0 +1,38 @@
+:root {
+  --codepen-bg: transparent;
+  --codepen-fg: #666;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--codepen-bg);
+  overflow: hidden;
+}
+
+button {
+  height: 80px;
+  width: 240px;
+  border-radius: 16px;
+  border: solid 3px var(--codepen-fg);
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  color: var(--codepen-fg);
+  font-size: 24px;
+  font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond,
+    Times New Roman, serif;
+}
+
+.spark {
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: var(--codepen-fg);
+  transform: none;
+}

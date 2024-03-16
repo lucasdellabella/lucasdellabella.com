@@ -6,6 +6,19 @@ description: Some of my cool and recent projects
 plum: true
 projects:
   Upcoming:
+    - name: "Machine Learning Experiments"
+      desc: "A series of interactive ML artifacts"
+      icon: "i-teenyicons-robot-outline"
+  Interactive:
+    - name: "Microinteractions"
+      link: "https://lucasdellabella.com/microinteractions"
+      desc: "Tiny but fun UI animations to make everyday web interactions pop!"
+      icon: "i-fluent-sparkle-48-regular"
+  Recent:
+    - name: "Notion Ding!"
+      link: "https://chrome.google.com/webstore/detail/notion-ding/joikmdcpokdfcmocfafpmbailndkpjim"
+      desc: "Make notion go ding when you complete tasks. Yes that's it."
+      icon: "i-simple-icons-notion"
     - name: "Lineage"
       link: "https://lineagenft.com"
       desc: "A fantasy NFT experimenting with on-chain family-ties."
@@ -14,16 +27,6 @@ projects:
       link: "https://yourkiwis.com"
       desc: "Prevent burnout without building new habits"
       icon: "i-emojione-monotone-kiwi-fruit"
-  Interactive:
-    - name: "Microinteractions"
-      link: "https://codepen.io/collection/aMyrmj"
-      desc: "Tiny but fun UI animations to make everyday web interactions pop!"
-      icon: "i-fluent-sparkle-48-regular"
-  Recent:
-    - name: "Notion Ding!"
-      link: "https://chrome.google.com/webstore/detail/notion-ding/joikmdcpokdfcmocfafpmbailndkpjim"
-      desc: "Make notion go ding when you complete tasks. Yes that's it."
-      icon: "i-simple-icons-notion"
   Old:
     - name: "Solidify"
       link: "#"

@@ -1,0 +1,90 @@
+:root {
+  font-size: 72px;
+  --codepen-bg: #1d1e22;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--codepen-bg);
+  overflow: hidden;
+}
+
+#fizzle-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80px;
+  width: 240px;
+  border-radius: 16px;
+  border: solid 3px white;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 24px;
+  font-family: Bodoni MT, Bodoni 72, Didot, Didot LT STD, Hoefler Text, Garamond,
+    Times New Roman, serif;
+}
+
+.triangle {
+  margin: 3px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: cyan;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  width: 16px;
+  height: 16px;
+
+  /* Apply or start animation? */
+  animation-name: fizzle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: linear; */
+  /* animation-fill-mode: forwards; */
+}
+
+#fizzle-text {
+  position: absolute;
+}
+
+#bar {
+  border-top: 1px solid black;
+  width: 100%;
+  position: absolute;
+  top: -50px;
+}
+
+/* Just want to pick transform values at random, in some range and then apply the animation */
+@keyframes fizzle {
+  0% {
+    opacity: 1;
+    transform: none;
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: translate(0, -12px);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translate(0, -25px);
+    animation-timing-function: linear;
+  }
+  75% {
+    transform: translate(0, -37px);
+    animation-timing-function: linear;
+  }
+  100% {
+    /* opacity: 0; */
+    transform: translate(0, -50px);
+  }
+}

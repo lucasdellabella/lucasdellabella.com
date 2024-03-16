@@ -1,0 +1,16 @@
+.viewport {
+  font-size: 72px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  border: 2px solid #666;
+  width: fit-content;
+}
+
+/* 
+iframe ~ iframe {
+  border-left: 1px solid white;
+} */

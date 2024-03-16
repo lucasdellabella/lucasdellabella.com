@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ projects: Record<string, any[]> }>();
+defineProps<{ projects: Record<string, any[]> }>()
 </script>
 
 <template>
@@ -15,7 +15,7 @@ defineProps<{ projects: Record<string, any[]> }>();
         :href="item.link"
         target="_blank"
         :class="
-          !item.link ? 'opacity-0 pointer-events-none h-0 -mt-8 -mb-4' : ''
+          !item.link ? 'opacity-0 disabled cursor-not-allowed' : ''
         "
         :title="item.name"
       >
